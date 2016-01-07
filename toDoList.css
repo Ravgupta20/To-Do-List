@@ -1,0 +1,70 @@
+#sDiv { 
+	background:none;border:none;
+}
+
+#formDiv{
+	border: 1px solid;
+	width:325px;
+	padding-left: 5px;
+	padding-top:  5px;
+	padding-bottom: 50px;
+	margin-top: 5px;
+	list-style-type: none;
+}
+#formID{
+	list-style-type: none;
+}
+
+
+
+#addButton{
+    font-family: Verdana;
+	width: 50px;
+	height: 20px;
+    color: white;
+    border: none;
+	background-color: #009933;
+	border-radius: 20px;
+	outline: none;
+}
+.buttonStyle{
+
+    color: blue;
+	border: none;
+	background-color: white;
+
+}
+.taskButtonDiv{
+	width: 85px;
+	position: relative;
+	display: inline;
+
+}
+
+.taskReadOnly{
+
+	border: none;
+	background-color:  #F7C6C3;
+    width: 214px;
+}
+
+
+
+.checkedStyle{
+    border: none;
+	background-color:  #66FF99;
+    width: 214px;
+    text-decoration: line-through;
+}
+.taskTextDiv{
+    width: 210px;
+}
+
+#thdD{
+
+	width: 300px;
+}
+
+#delTaskButtonDiv{
+	padding-top: 5px;
+}
