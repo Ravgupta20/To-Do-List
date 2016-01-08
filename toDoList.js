@@ -170,59 +170,59 @@
 	}
 		
 		
-		function removeTask(taskElement, taskLi){
+		function removeTask(){
 			//thn.style.display ="none";
-			taskElement.removeChild(taskLi);
+			arguments[0].removeChild(arguments[1]);
 			inputBoxElement.focus();
 			inputBoxElement.value= "";
 	    }
 
-	    function changeDisplays(taskBox, mainEditButton, altEditButton, CheckBx, txtChanged, compareTxt){
+	    function changeDisplays(){
 		    	
 	    	//inputTaskText.style.display = "none";
-			taskBox.className = "taskTextDiv";
+			arguments[0].className = "taskTextDiv";
 	    	//taskBox.style.display = "inline"
-	    	mainEditButton.style.display = "none";
-	    	altEditButton.style.display = "inline";
-	    	taskBox.disabled = false;
-	    	taskBox.focus();
-	    	CheckBx.disabled=true;
+	    	arguments[1].style.display = "none";
+	    	arguments[2].style.display = "inline";
+	    	arguments[0].disabled = false;
+	    	arguments[0].focus();
+	    	arguments[3].disabled=true;
 			
 	    }
 
-	    function editTask(taskBox2, cmprTxt, mainEditButton2, altEditButton2, CheckBx2, changedText){
+	    function editTask(){
              numC++;
              console.log(numC);
-			 if(changedText){
+			 if(arguments[5]){
 			 	//numC++;
 			 	//console.log(numC);
-			    CheckBx2.checked = false;
-			    taskBox2.className = "taskReadOnly";
-			    changedText= false;
-			    cmprTxt = taskBox2.value;
+			    arguments[4].checked = false;
+			    arguments[0].className = "taskReadOnly";
+			    arguments[5]= false;
+			    arguments[1] = arguments[0].value;
 
 			 }
 			 else{
-				crossedOut(taskBox2, CheckBx2);
+				crossedOut(arguments[0], arguments[4]);
 			}
 			
-	    	mainEditButton2.style.display = "inline";
-	    	altEditButton2.style.display = "none";
+	    	arguments[2].style.display = "inline";
+	    	arguments[3].style.display = "none";
 	    	inputBoxElement.focus();	
-	    	taskBox2.disabled = true;
-	    	CheckBx2.disabled= false;
+	    	arguments[0].disabled = true;
+	    	arguments[4].disabled= false;
 	    	//alert(numC);
 			
 	    }
 
 
-	    function crossedOut(inputStyle, chkBox){
+	    function crossedOut(){
 	    	
-         if(chkBox.checked){
-  		 	inputStyle.className ="checkedStyle";
+         if(arguments[1].checked){
+  		 	arguments[0].className ="checkedStyle";
   		 }
   		 else{
-  		 	inputStyle.className = "taskReadOnly";
+  		 	arguments[0].className = "taskReadOnly";
          }
 
 
